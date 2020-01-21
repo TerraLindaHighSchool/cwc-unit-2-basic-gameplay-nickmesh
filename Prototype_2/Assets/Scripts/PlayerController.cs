@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         //launches fish
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            //Launch a projectile from the player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
 }
