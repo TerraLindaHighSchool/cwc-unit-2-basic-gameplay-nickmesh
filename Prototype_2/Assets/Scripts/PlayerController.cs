@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     //makes the boundary range
     public float xRange = 10.0f;
-
+    [SerializeField] private GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
         //moves the player
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-
+        //launches fish
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            //Launch a projectile from the player
+        }
     }
 }
