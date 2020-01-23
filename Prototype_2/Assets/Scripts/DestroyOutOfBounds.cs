@@ -9,19 +9,22 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.z > topBound)
+        //Destroys the projectiles
+        if (transform.position.z > topBound)
         {
             Destroy(gameObject);
         }
+        //Destroys animals/ends game
         else if (transform.position.z < lowerBound)
         {
             Destroy(gameObject);
+            Debug.Log("Game Over!");
         }
     }
 }
