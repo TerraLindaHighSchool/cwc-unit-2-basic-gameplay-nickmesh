@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     //makes the boundary range
     public float xRange = 10.0f;
-    [SerializeField] private GameObject projectilePrefab;
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
